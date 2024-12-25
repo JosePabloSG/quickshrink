@@ -1,5 +1,12 @@
-import Sidebar from '@/components/layout/sidebar'
+'use client'
+
+import dynamic from 'next/dynamic'
 import React from 'react'
+
+// Dynamic import of Sidebar with no SSR
+const Sidebar = dynamic(() => import('@/components/layout/sidebar'), {
+  ssr: false
+})
 
 interface LayoutProps {
   children: React.ReactNode
@@ -8,7 +15,9 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex h-screen bg-gray-100">
-      <Sidebar />
+      <div suppressHydrationWarning>
+        <Sidebar />
+      </div>
       <main className="flex-1 p-8 md:ml-64 overflow-auto">
         {children}
       </main>
@@ -17,4 +26,3 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 }
 
 export default Layout
-

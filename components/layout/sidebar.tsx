@@ -3,11 +3,10 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { LayoutDashboard, LinkIcon, BarChart2, Settings, LogOut } from 'lucide-react'
+import { LinkIcon, BarChart2, Settings, LogOut } from 'lucide-react'
 import Image from 'next/image'
 
 const navItems = [
-  { icon: LayoutDashboard, label: 'Dashboard Overview', href: '/dashboard' },
   { icon: LinkIcon, label: 'URL Management', href: '/dashboard/urls' },
   { icon: BarChart2, label: 'Analytics', href: '/dashboard/analytics' },
   { icon: Settings, label: 'Settings', href: '/dashboard/settings' },

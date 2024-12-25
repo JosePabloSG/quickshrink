@@ -44,12 +44,14 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Button 
-              size="sm"
-              className="bg-blue-violet-500 hover:bg-blue-violet-600 text-white"
-            >
-              Login / Sign Up
-            </Button>
+            <Link href="/login">
+              <Button
+                size="sm"
+                className="bg-blue-violet-500 hover:bg-blue-violet-600 text-white"
+              >
+                Login / Sign Up
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -92,11 +94,11 @@ export function Navbar() {
             </Link>
           ))}
           <div className="mt-4 px-3">
-            <Button 
-              className="w-full bg-blue-violet-500 hover:bg-blue-violet-600 text-white"
-            >
-              Login / Sign Up
-            </Button>
+            <Link href="/login">
+              <Button className="w-full bg-blue-violet-500 hover:bg-blue-violet-600 text-white" >
+                Login / Sign Up
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

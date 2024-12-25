@@ -1,6 +1,6 @@
+import { Navbar } from "@/components/layout/navbar";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Transform long URLs into short, manageable links with Quickshrink. Free, fast, and secure URL shortening service.",
 };
 
-export default function RootLayout({
+export default function LandingLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -27,6 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-dull-lavender-50`} suppressHydrationWarning
       >
+        <Navbar />
         {children}
       </body>
     </html>

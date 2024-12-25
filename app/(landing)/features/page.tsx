@@ -63,7 +63,12 @@ export default function Features() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <FeatureCard key={index} {...feature} />
+            <div
+              key={index}
+              className={`animate-fall-down delay-[${index * 100}ms]`}
+            >
+              <FeatureCard {...feature} />
+            </div>
           ))}
         </div>
       </main>
@@ -71,4 +76,3 @@ export default function Features() {
     </div>
   )
 }
-
